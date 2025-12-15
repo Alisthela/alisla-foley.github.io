@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <section id="hero">
         <div class="hero">
         <div class="background-video">
             <iframe 
@@ -17,25 +18,166 @@
             </iframe>
         </div>
             <nav>
-                <img src="Images/Logo.png" class="logo">
+                <a href="https://alisthela.github.io/alisla-foley.github.io/"><img src="Images/Logo.png" class="logo"></a>
                 <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">PROJECTS</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                    <li><div class="social-icons">
-                        <a href="https://www.linkedin.com/in/alisla-foley/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/Alisthela"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                    </li>
+                    <list><a href="#hero">HOME</a></list>
+                    <list class="projects-dropdown">
+                        <a href="#projects">PROJECTS <i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="Projects/fire-in-the-void.html">Fire in the Void</a></li>
+                            <li><a href="Projects/tiny-transit.html">Tiny Transit</a></li>
+                            <li><a href="Projects/paddock-panic.html">Paddock Panic</a></li>
+                        </ul>
+                    </list>
+
+                    <list><a href="#about">ABOUT</a></list>             
+                    <list><a href="#contact">CONTACT</a></list>
+                    <list><div class="social-icons"><a href="https://www.linkedin.com/in/alisla-foley/"><i class="fa-brands fa-linkedin"></i></a></div></list>
+                    <list><div class="social-icons"><a href="https://github.com/Alisthela"><i class="fa-brands fa-github"></i></a></div></list>
                 </ul>
             </nav>
-            <div class="content">
-                <h3>Hi, I'm</h3>
-                <h1>ALISLA FOLEY</h1>
-                <h3 class="typing-text"><span></span></h3>
-                <a href="#">About Me</a>
+
+            <div class="hero-content">
+                <div class="content">
+                    <h1>ALISLA FOLEY</h1>
+                    <h3 class="typing-text"><span></span></h3>
+                <div class="content-buttons">
+                    <a href="#projects">Projects</a>
+                    <a href="#about">About Me</a>
+                </div>
+                </div>
             </div>
+
         </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="projects-container">
+                <div class="projects-text">
+                    <h2>Projects</h2>
+                    <p class="projects-introduction">
+                        These are projects that I have worked on over the years, using C++ and Unreal Engine 5 Blueprints.
+                    </p>
+
+                    <div class="projects-grid">
+
+                        <a href="Projects/fire-in-the-void.html">
+                        <div class="project-item">
+                            <img class ="project-logo" src="Images/FireInTheVoid/FireInTheVoidLogo.png" alt="Fire in the Void Logo">
+
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="Images/FireInTheVoid/FireInTheVoidThumbnail.png" alt="Fire in the Void">
+                                    <div class="image-text">
+                                        <p>As a newly hired space firefighter, race to extinguish blazing space stations before it's too late.</p>
+
+                                        <div class="project-tags">
+                                            <span class="important">Blueprints</span>
+                                            <span>Main Systems</span>
+                                            <span>Game Loop</span>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+
+                        <a href="Projects/tiny-transit.html">
+                        <div class="project-item">
+                            <img class ="project-logo" src="Images/TinyTransit/TinyTransitLogo.png" alt="Tiny Transit Logo">
+
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="Images/TinyTransit/TinyTransitThumbnail.png" alt="Tiny Transit">
+                                    <div class="image-text">
+                                        <p>An isometric delivery game featuring destructible environments and gloriously chaotic driving.</p>
+
+                                        <div class="project-tags">
+                                            <span class="important">C++ & Blueprints</span>
+                                            <span>Main Systems</span>
+                                            <span>Physics</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+
+                        <a href="Projects/paddock-panic.html">
+                        <div class="project-item">
+                            <img class ="project-logo" src="Images/PaddockPanic/PaddockPanicLogo.png" alt="Paddock Panic Logo">
+
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="Images/PaddockPanic/PaddockPanicThumbnail.png" alt="Paddock Panic">
+                                    <div class="image-text">
+                                        <p>Guide a lost herd of sheep back to their paddock before nightfall, outsmarting dangers along the way.</p>
+                                        
+                                        <div class="project-tags">
+                                            <span class="important">Blueprints</span>
+                                            <span>Player</span>
+                                            <span>AI Logic</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="Images/AlislaFoleyPortrait.jpg" alt="Alisla Foley">
+                </div>
+
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>
+                        I'm a C++ Game Programmer specializing in Unreal Engine development, with a strong focus on creating immersive and engaging experiences across Mobile, VR, and PC platforms. <br> <br>
+                        I hold an Advanced Diploma of Professional Game Development, along with Dual Diplomas in Screen and Media and Information Technology, all earned through the Academy of Interactive Entertainment (AIE). Based in Adelaide, South Australia, I'm passionate about bringing innovative gameplay experiences to life.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <h3>Game Development</h3>
+                            <p>Unreal Engine, gameplay systems, tools, optimization, and documentation.</p>
+                        </div>
+                        <div class="highlight">
+                            <i class="fa-solid fa-microchip"></i>
+                            <h3>C++ Programming</h3>
+                            <p>Performance profiling, low-level architecture, object-oriented programming, and data-oriented design.</p>
+                        </div>
+                        <div class="highlight">
+                            <i class="fa-solid fa-brain"></i>
+                            <h3>AI Systems</h3>
+                            <p>Behaviour trees, decision-making, and performance optimized AI.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            const nav = document.querySelector('nav');
+            const hero = document.querySelector('.hero')
+
+            window.addEventListener('scroll', () => {
+                const heroBottom = hero.offsetHeight;
+                if(window.scrollY > heroBottom) {
+                    nav.classList.remove('hidden');
+                }
+                else {
+                    nav.classList.add('hidden');
+                }
+            });
+        </script>
+
     </body>
 </html>

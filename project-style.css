@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #000;
+    color: #fff;
+}
+
+/* Hero section */
+.hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero-content{
+    text-align: center;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero-content h1{
+    font-size: 6vw;
+    color: #ffffff;
+    font-weight: 600;
+    -webkit-text-stroke: 2px #ffffff;
+    transition: 0.5s ease;
+}
+.hero-content h1:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+.hero-content h2{
+    font-size: 4vw;
+    color: #ffffff6b;
+    font-weight: 600;
+    -webkit-text-stroke: 2px #ffffff;
+    transition: 0.5s ease;
+}
+.hero-content h2:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+.content-buttons{
+    margin-top: auto;
+    display: flex;
+    gap: 1vw;
+    padding-top: 6vw;
+    width: 100%;
+    justify-content: center;
+}
+.content-buttons a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 1vw;
+    border: 2px solid #fff;
+    padding: 0.75vw 2vw;
+    border-radius: 2vw;
+    transition: 0.3s ease;
+}
+.content-buttons a:hover{
+    transform: scale(1.05);
+}
+
+/* Background video */
+.background-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+.background-video iframe{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Navigation bar */
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(rgb(0, 0, 0),rgba(0, 0, 0, 0));
+    padding: 20px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+nav.hidden{
+    transform: translateY(-10%);
+    opacity: 0;
+}
+nav:hover{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+nav .logo{
+    width: 500px;
+    transition: 0.5s ease;
+}
+nav .logo:hover{
+    color: #fff;
+    transform: scale(1.2);
+}
+
+nav .social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5vw;
+    height: 2.5vw;
+    background-color: #ffffff4d;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    margin: 10px;
+    transition: 0.5s ease;
+}
+nav .social-icons a:hover{
+    color: #fff;
+    transform: scale(1.2);
+}
+
+nav ul list{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+    transition: 0.5s ease;
+}
+nav ul list:hover{
+    color: #fff;
+    transform: scale(1.1);
+}
+
+nav ul list a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 32px;
+}
+
+/* Projects dropdown */
+.projects-dropdown {
+    position: relative;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0,0,0,0.9);
+    min-width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 11;
+    padding: 0;
+    margin: 0;
+}
+.dropdown-content li{
+    list-style: none;
+}
+.dropdown-content li a{
+    display: block;
+    padding: 12px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s;
+    font-size: 20px;
+}
+.dropdown-content li a:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+.projects-dropdown:hover .dropdown-content {
+    display:block;
+}
+
+/* Project Sections */
+.project-section{
+    width: 100%;
+    min-height: 80vh;
+    padding: 10vw 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.project-section h2{
+    font-size: 4vw;
+    color: #fff;
+    -webkit-text-stroke: 1px #fff;
+    margin-bottom: 2vw;
+}
+.project-section p, .project-section ul{
+    font-size: 1.5vw;
+    line-height: 1.6;
+    max-width: 900px;
+    margin-bottom: 2vw;
+}
+.project-section ul li a{
+    color: #43baff;
+    text-decoration: underline;
+}
+
+/* Device adjustments */
+@media screen and (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 8vw;
+    }
+    .hero-content h2{
+        font-size: 5vw;
+    }
+    .content-buttons a{
+        font-size: 1.2vw;
+        padding: 0.8vw, 2.5vw;
+    }
+    nav ul list a {
+        font-size: 24px;
+    }
+    nav .social-icons a{
+        width: 3vw;
+        height: 3vw;
+    }
+    .project-section h2{
+        font-size: 5vw;
+    }
+    .project-section p, .project-section ul{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 10vw;
+    }
+    .hero-content h2{
+        font-size: 6vw;
+    }
+    .hero-content{
+        padding: 4vw;
+    }
+    .content-buttons{
+        flex-direction: column;
+        gap: 2vw;
+        padding-top: 4vw;
+    }
+    .content-buttons a{
+        font-size: 1.5vw;
+        padding: 1vw, 4vw;
+        margin-left: 30vw;
+        margin-right: 30vw;
+    }
+    nav ul list a {
+        font-size: 20px;
+    }
+    nav .social-icons a{
+        width: 4vw;
+        height: 4vw;
+    }
+    .project-section h2{
+        font-size: 6vw;
+    }
+    .project-section p, .project-section ul{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 12vw;
+    }
+    .hero-content h2{
+        font-size: 8vw;
+    }
+    .hero-content{
+        padding: 3vw;
+    }
+    .content-buttons a{
+        font-size: 4vw;
+        padding: 1.2vw, 5vw;
+    }
+    nav ul list a {
+        font-size: 16px;
+    }
+    nav .social-icons a{
+        width: 5vw;
+        height: 5vw;
+    }
+    .project-section h2{
+        font-size: 8vw;
+    }
+    .project-section p, .project-section ul{
+        font-size: 4vw;
+    }
+}

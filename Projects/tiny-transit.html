@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tiny Transit - Alisla Foley</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="/project-style.css">
+    </head>
+    <body>
+
+        <div class="hero">
+            <div class="background-video">
+                <iframe 
+                src="https://www.youtube.com/embed/chXMYggHU8U?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=chXMYggHU8U"
+                frameborder="0"
+                allow="autoplay; fullscreen"
+                allowfullscreen>
+                </iframe>
+            </div>
+
+            <nav>
+                <a href="https://alisthela.github.io/alisla-foley.github.io/"><img src="/Images/Logo.png" class="logo"></a>
+                <ul>
+                    <list><a href="/index.html#hero">HOME</a></list>
+
+                    <list class="projects-dropdown">
+                        <a href="#projects">PROJECTS <i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="/Projects/fire-in-the-void.html">Fire in the Void</a></li>
+                            <li><a href="/Projects/tiny-transit.html">Tiny Transit</a></li>
+                            <li><a href="/Projects/paddock-panic.html">Paddock Panic</a></li>
+                        </ul>
+                    </list>
+
+                    <list><a href="/index.html#about">ABOUT</a></list>          
+                    <list><a href="#contact">CONTACT</a></list>
+                    <list><div class="social-icons"><a href="https://www.linkedin.com/in/alisla-foley/"><i class="fa-brands fa-linkedin"></i></a></div></list>
+                    <list><div class="social-icons"><a href="https://github.com/Alisthela"><i class="fa-brands fa-github"></i></a></div></list>
+                </ul>
+            </nav>
+
+            <div class ="hero-content">
+                <div class="content">
+                    <h2><i class="fa-solid fa-smog"></i><i class="fa-solid fa-truck-fast"></i></h2>
+                    <h1>Tiny Transit</h1>
+                </div>
+                <div class="content-buttons">
+                    <a href="#project-about">About</a>
+                    <a href="#project-role">My Role</a>
+                    <a href="#project-progression">Progression</a>
+                    <a href="#project-documents">Documents</a>
+                </div>
+            </div>
+        </div>
+
+        <section id="project-about" class="project-section">
+            <h2>About</h2>
+            <p>
+                PARAGRAPH HERE..
+            </p>
+        </section>
+
+        <section id="project-role" class="project-section">
+            <h2>My Role</h2>
+            <p>
+                PARAGRAPH HERE..
+            </p>
+        </section>
+
+        <section id="project-progression" class="project-section">
+            <h2>Technical Progression</h2>
+            <p>
+                PARAGRAPH HERE..
+            </p>
+        </section>
+
+        <section id="project-documents" class="project-section">
+            <h2>Documents</h2>
+            <p>
+                PARAGRAPH HERE..
+            </p>
+            <ul>
+                <li><a href="Documents/TinyTranit-TDD.pdf" target="_blank">Technical Design Document (TDD)</a></li>
+            </ul>
+        </section>
+
+        <script>
+            const nav = document.querySelector('nav');
+            const hero = document.querySelector('.hero')
+
+            window.addEventListener('scroll', () => {
+                const heroBottom = hero.offsetHeight;
+                if(window.scrollY > heroBottom) {
+                    nav.classList.remove('hidden');
+                }
+                else {
+                    nav.classList.add('hidden');
+                }
+            });
+        </script>
+
+    </body>
+</html>
