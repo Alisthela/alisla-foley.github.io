@@ -7,10 +7,13 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
-
 body{
-    background-color: #000;
+    background-repeat: repeat;
+    background-size: 15vw;
     color: #fff;
+}
+body.tiny-transit{
+    background-image: url("Images/TinyTransit/TinyTransitBackground.png");
 }
 
 /* Hero section */
@@ -32,7 +35,7 @@ body{
     align-items: center;
 }
 .hero-content h1{
-    font-size: 6vw;
+    font-size: clamp(3rem, 6vw, 6rem);
     color: #ffffff;
     font-weight: 600;
     -webkit-text-stroke: 2px #ffffff;
@@ -43,7 +46,7 @@ body{
     color: transparent;
 }
 .hero-content h2{
-    font-size: 4vw;
+    font-size: clamp(2rem, 4vw, 4rem);
     color: #ffffff6b;
     font-weight: 600;
     -webkit-text-stroke: 2px #ffffff;
@@ -52,6 +55,20 @@ body{
 .hero-content h2:hover{
     -webkit-text-stroke: 2px #fff;
     color: transparent;
+}
+.hero-content:has(.content .logo:hover) .content-buttons{
+    opacity: 0.25;
+    transition: opacity 0.3s ease;
+}
+
+.content .logo{
+    width: 60vw;
+    opacity: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.content .logo:hover{
+    transform: scale(.9);
+    opacity: 15%;
 }
 
 .content-buttons{
@@ -67,7 +84,7 @@ body{
     display: inline-block;
     color: #fff;
     background-color: rgba(255, 255, 255, 0.2);
-    font-size: 1vw;
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
     border: 2px solid #fff;
     padding: 0.75vw 2vw;
     border-radius: 2vw;
@@ -75,6 +92,8 @@ body{
 }
 .content-buttons a:hover{
     transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 1);
+    color: #000000;
 }
 
 /* Background video */
@@ -121,7 +140,7 @@ nav:hover{
 }
 
 nav .logo{
-    width: 500px;
+    width: clamp(150px, 20vw, 500px);
     transition: 0.5s ease;
 }
 nav .logo:hover{
@@ -133,8 +152,8 @@ nav .social-icons a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 2.5vw;
-    height: 2.5vw;
+    width: clamp(30px, 2.5vw, 50px);
+    height: clamp(30px, 2.5vw, 50px);
     background-color: #ffffff4d;
     border: 1px solid #ffffff;
     border-radius: 50%;
@@ -160,7 +179,7 @@ nav ul list:hover{
 nav ul list a{
     text-decoration: none;
     color: #fff;
-    font-size: 32px;
+    font-size: clamp(15px, 2vw, 20px);
 }
 
 /* Projects dropdown */
@@ -189,7 +208,7 @@ nav ul list a{
     color: #fff;
     text-decoration: none;
     transition: background 0.3s;
-    font-size: 20px;
+    font-size: clamp(15px, 1.2vw, 20px);
 }
 .dropdown-content li a:hover{
     background-color: rgba(255,255,255,0.1);
@@ -197,122 +216,337 @@ nav ul list a{
 .projects-dropdown:hover .dropdown-content {
     display:block;
 }
+.section-divider{
+    width: 100%;
+    height: 8vh;
+    background: linear-gradient(to bottom, #000, #00000083, transparent);
+}
 
 /* Project Sections */
 .project-section{
     width: 100%;
     min-height: 80vh;
-    padding: 10vw 5vw;
+    padding: 5vw 5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 .project-section h2{
-    font-size: 4vw;
-    color: #fff;
-    -webkit-text-stroke: 1px #fff;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #000000;
     margin-bottom: 2vw;
 }
 .project-section p, .project-section ul{
-    font-size: 1.5vw;
+    list-style: none;
+    font-size: clamp(0.5rem, 1.5vw, 1.3rem);
     line-height: 1.6;
-    max-width: 900px;
-    margin-bottom: 2vw;
+    color: #000;
 }
 .project-section ul li a{
     color: #43baff;
     text-decoration: underline;
 }
 
+/* Project About */
+.project-about-layout{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 6vw;
+    align-items: start;
+    width: 100%;
+}
+.project-about-text, .project-role-text{
+    background: rgba(255,255,255,1);
+    border-radius: 30px;
+    padding: 2.5vw;
+    text-align: justify;
+    box-shadow: 0 20px 20px rgb(0, 0, 0);
+}
+
+/* Project Gallery */
+.project-gallery{
+    position: relative;
+    overflow: visible;
+    background: rgba(255,255,255,1);
+    border-radius: 30px;
+    padding: 2.5vw;
+    box-shadow: 0 20px 20px rgb(0, 0, 0);
+}
+.project-gallery img#gallery-main{
+    width: 100%;
+    border-radius: 2vw;
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(107, 102, 102, 0.6);
+}
+.gallery-scroll-spacer {
+    flex: 0 0 0.05vw;
+    height: 1px;
+}
+.gallery-main-caption{
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 2vw;
+    text-align: center;
+}
+.gallery-arrow{
+    position: absolute;
+    top: calc(100% - 50%);
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 1);
+    border: none;
+    color: #000000;
+    font-size: 2vw;
+    padding: 0.1vw 0.8vw;
+    cursor: pointer;
+    border-radius: 20%;
+    z-index: 5;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.9);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.gallery-arrow:hover{
+    background: rgba(255,255,255,1);
+    transform: translateY(-50%) scale(1.1);
+}
+.gallery-arrow.left{
+    left: -2vw;
+}
+.gallery-arrow.right{
+    right: -2vw;
+}
+.gallery-thumbnails-wrapper{
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: none;
+}
+.gallery-thumbnails{
+    display: flex;
+    gap: 20px;
+    padding: 20px 20px 20px 20px;
+    margin-top: 3vh;
+    align-items: center;
+}
+.gallery-thumbnails img{
+    flex: 0 0 260px;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.75);
+    transform-origin: center center;
+    will-change: transform;
+    transition: transform 0.3s ease, opacity 0.3s ease, outline 0.3s ease;
+}
+.gallery-thumbnails img:hover{
+    opacity: 0.75;
+}
+.gallery-thumbnails img.active{
+    opacity: 1;
+    outline: 6px solid #43baff;
+    transform: scale(1.1);
+    outline-offset: -1px;
+}   
+
+/* Project Role */
+.role-list{
+    list-style: none;
+    padding: 0;
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+.role-item{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    align-items: center;
+    background: rgba(255,255,255,1);
+    border-radius: 30px;
+    padding: 2.5vw;
+}
+.role-item img{
+    width: 75%;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+}
+.role-content h3{
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 0.5vw;
+    color: #000;
+}
+.role-content p{
+    font-size: clamp(0.5rem, 1.5vw, 1.3rem);
+    line-height: 1.6;
+    color: #000;
+}
+
+/* Project documents */
+.project-documents-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6vw;
+    align-items: start;
+    background: rgba(255,255,255,1);
+    width: 100%;
+    border-radius: 30px;
+    padding: 2.5vw;
+    text-align: justify;
+    box-shadow: 0 20px 20px rgb(0, 0, 0);
+}
+
+.project-documents-pdf-preview{
+    position: relative;
+    width: 85%;
+    aspect-ratio: 4/5;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgb(0, 0, 0.6);
+    justify-self: center;
+}
+.project-documents-pdf-preview iframe{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* NEW */
 /* Device adjustments */
 @media screen and (max-width: 1024px) {
-    .hero-content h1 {
-        font-size: 8vw;
+    .hero {
+        height: 90vh;
     }
-    .hero-content h2{
-        font-size: 5vw;
+    .content-buttons {
+        padding-top: 4vw;
     }
-    .content-buttons a{
-        font-size: 1.2vw;
-        padding: 0.8vw, 2.5vw;
+    nav .logo {
+        width: clamp(140px, 30vw, 500px);
     }
-    nav ul list a {
-        font-size: 24px;
+
+    .project-about-layout, .project-documents-layout {
+        gap: 4vw;
     }
-    nav .social-icons a{
-        width: 3vw;
-        height: 3vw;
+    .project-section {
+        padding: 6vw 4vw;
     }
-    .project-section h2{
-        font-size: 5vw;
-    }
-    .project-section p, .project-section ul{
-        font-size: 2vw;
+    .project-documents-pdf-preview {
+        width: 90%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 10vw;
+    .hero-content {
+        padding: 6vw;
     }
-    .hero-content h2{
-        font-size: 6vw;
-    }
-    .hero-content{
-        padding: 4vw;
-    }
-    .content-buttons{
+    .content-buttons {
         flex-direction: column;
-        gap: 2vw;
+        gap: 3vw;
         padding-top: 4vw;
     }
-    .content-buttons a{
-        font-size: 1.5vw;
-        padding: 1vw, 4vw;
-        margin-left: 30vw;
-        margin-right: 30vw;
+    .content-buttons a {
+        width: fit-content;
+        padding: 0.5rem 2rem;
+        font-size: 0.75rem;
+        align-self: center;
+    }
+
+    nav {
+        padding: 16px 4%;
     }
     nav ul list a {
-        font-size: 20px;
+        font-size: 18px;
     }
-    nav .social-icons a{
-        width: 4vw;
-        height: 4vw;
+    nav .social-icons a {
+        width: 30px;
+        height: 30px;
     }
-    .project-section h2{
-        font-size: 6vw;
+
+    .project-about-layout, .project-documents-layout {
+        grid-template-columns: 1fr;
+        gap: 6vw;
+    }
+    .project-about-text, .project-role-text {
+        text-align: justify;
+        padding: 4vw;
     }
     .project-section p, .project-section ul{
-        font-size: 3vw;
+        font-size: clamp(0.8rem, 3vw, 1.25rem);
+    }
+    .project-section h2, .role-content h3 { 
+        text-align: center;
+        margin-top: 3vh;
+    }
+
+    .gallery-arrow {
+        display: none;
+    }
+    .gallery-thumbnails img {
+        flex: 0 0 55vw;
+        max-width: 80vw;
+    }
+    .gallery-thumbnails-wrapper{
+        overflow-x: auto;
+        overflow-y: visible;
+        padding: 20px 0;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .role-item img, .project-documents-pdf-preview {
+        width: 100%;
+        margin-top: 2vh;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 12vw;
+    .hero {
+        height: 85vh;
     }
-    .hero-content h2{
-        font-size: 8vw;
+    .hero-content {
+        padding: 8vw 6vw;
     }
-    .hero-content{
-        padding: 3vw;
+
+    .content .logo {
+        width: 80vw;
     }
-    .content-buttons a{
-        font-size: 4vw;
-        padding: 1.2vw, 5vw;
+    .content-buttons a {
+        font-size: 0.95rem;
+        padding: 0.9rem 2rem;
+    }
+
+    nav .logo {
+        width: 160px;
+    }
+    nav .social-icons a {
+        width: 36px;
+        height: 36px;
     }
     nav ul list a {
         font-size: 16px;
     }
-    nav .social-icons a{
-        width: 5vw;
-        height: 5vw;
+
+    .project-section {
+        padding: 8vw 5vw;
     }
-    .project-section h2{
-        font-size: 8vw;
+    .project-about-text, .project-role-text {
+        padding: 5vw;
     }
-    .project-section p, .project-section ul{
-        font-size: 4vw;
+
+    .gallery-thumbnails img {
+        flex: 0 0 70vw;
+        max-width: 90vw;
+    }
+
+    .project-documents-pdf-preview {
+        width: 100%;
+        aspect-ratio: 3 / 4;
     }
 }

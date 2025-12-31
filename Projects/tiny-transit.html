@@ -4,14 +4,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tiny Transit - Alisla Foley</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link rel="stylesheet" href="/alisla-foley.github.io/project-style.css">
+        <link rel="stylesheet" href="/project-style.css">
     </head>
-    <body>
+    <body class="tiny-transit">
 
         <div class="hero">
             <div class="background-video">
                 <iframe 
-                src="https://www.youtube.com/embed/chXMYggHU8U?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=chXMYggHU8U"
+                src="https://www.youtube.com/embed/jlhXLqLWDtE?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=jlhXLqLWDtE"
                 frameborder="0"
                 allow="autoplay; fullscreen"
                 allowfullscreen>
@@ -24,7 +24,7 @@
                     <list><a href="/alisla-foley.github.io/index.html#hero">HOME</a></list>
 
                     <list class="projects-dropdown">
-                        <a href="/alisla-foley.github.io/#projects">PROJECTS </a><i class="fa-solid fa-caret-down"></i></a>
+                        <a href="/alisla-foley.github.io/#projects">PROJECTS <i class="fa-solid fa-caret-down"></i></a>
                         <ul class="dropdown-content">
                             <li><a href="/alisla-foley.github.io/Projects/fire-in-the-void.html">Fire in the Void</a></li>
                             <li><a href="/alisla-foley.github.io/Projects/tiny-transit.html">Tiny Transit</a></li>
@@ -41,8 +41,7 @@
 
             <div class ="hero-content">
                 <div class="content">
-                    <h2><i class="fa-solid fa-smog"></i><i class="fa-solid fa-truck-fast"></i></h2>
-                    <h1>Tiny Transit</h1>
+                    <img src="/alisla-foley.github.io/Images/TinyTransit/TinyTransitLogo.png" class="logo"></a>
                 </div>
                 <div class="content-buttons">
                     <a href="/alisla-foley.github.io/tiny-transit.html#project-about">About</a>
@@ -53,35 +52,137 @@
             </div>
         </div>
 
-        <section id="project-about" class="project-section">
+        <div class="section-divider"></div>
+        
+        <section id="project-about" class="project-section project-about-layout">
+
+            <div class="project-about-text">
             <h2>About</h2>
             <p>
-                PARAGRAPH HERE..
+                Tiny Transit is a fast-paced, isometric delivery arcade game where chaos is the key to success. With a limited amount of time on the clock, players must earn as much money as possible by delivering packages, drifting for bonuses, completing challenges, and smashing through the environment.<br><br>
+                Drive through a massive, obstacle-filled map as you weave through traffic, navigate tight corners, take on quirky quests, and destroy everything in your path. Every crash, drift, and physics-driven interaction feeds into a playful scoring system that rewards speed, creativity, and reckless efficiency.<br><br>
+                Designed for players who love expressive vehicle handling and arcade-style mayhem, Tiny Transit embraces silliness and freedom. Gameplay is driven by momentum, chaos, and player choice, turning every delivery into an opportunity for glorious destruction and big payouts.
             </p>
+            </div>
+
+            <div class="project-gallery">
+                <div class="gallery-background">
+                    <div id="gallery-caption" class="gallery-main-caption">
+                        Driving off Waterfall
+                    </div>
+                <img id="gallery-main" src="/alisla-foley.github.io/Images/TinyTransit/Gallery/GalleryImage1.png" alt="Project Image 1">
+                </div>
+
+                <div class="gallery-thumbnails-wrapper">
+                    <div class="gallery-thumbnails">
+                        <img src="/alisla-foley.github.io/Images/TinyTransit/Gallery/GalleryImage1.png" onclick="setImage(0)">
+                        <img src="/alisla-foley.github.io/Images/TinyTransit/Gallery/GalleryImage2.png" onclick="setImage(1)">
+                        <img src="/alisla-foley.github.io/Images/TinyTransit/Gallery/GalleryImage3.png" onclick="setImage(2)">
+                        <img src="/alisla-foley.github.io/Images/TinyTransit/Gallery/GalleryImage4.png" onclick="setImage(3)">
+                        <img src="/alisla-foley.github.io/Images/TinyTransit/Gallery/GalleryImage5.png" onclick="setImage(4)">
+                        <img src="/alisla-foley.github.io/Images/TinyTransit/Gallery/GalleryImage6.png" onclick="setImage(5)">
+                        <div class="gallery-scroll-spacer"></div>
+                    </div>
+                </div>
+
+                <button class="gallery-arrow left" onclick="prevImage()">&#10094;</button>
+                <button class="gallery-arrow right" onclick="nextImage()">&#10095;</button>
+            </div>
+
         </section>
 
         <section id="project-role" class="project-section">
-            <h2>My Role</h2>
-            <p>
-                PARAGRAPH HERE..
-            </p>
-        </section>
+            <div class="project-role-text">
+                <h2>My Role</h2>
+                <p>
+                    Over the 4.5 months spent developing Tiny Transit, I served as the primary gameplay and systems programmer, while also contributing across disciplines with VFX, SFX, and early placeholder art. Early in development, I documented core systems and technical goals in our Technical Design Document and prototyped them using both C++ and Blueprints during the proof-of-concept phase. Midway through production, the loss of an artist and designer required a significant rescope of the project, including a redesign of core mechanics, camera perspective, and visual direction to accomodate a heavier workload. This transition shifted the game from a third-person, Crazy Taxi-inspired experience to a chaotic, isometric, family-friendly delivery game. Throughout this iteration-heavy process, I adapted existing systems and built new ones to support the revised design, ensuring the gameplay remained expressive, fast-paced, and cohesive despite the major directional changes. The main features I worked on are: <br><br>
+                </p>
+                <ul class="role-list">
 
-        <section id="project-progression" class="project-section">
-            <h2>Technical Progression</h2>
-            <p>
-                PARAGRAPH HERE..
-            </p>
+                    <li class="role-item">
+                        <div class="role-content">
+                            <h3>Main Game Loop Logic</h3>
+                            <p>
+                                I implemented the core game loop that drives Tiny Transit's fast-paced delivery structure. This included managing time pressure, player progression, scoring flow, and challenge completion. The system was built to be flexible enough to support multiple gamemodes and allow for designers to easily edit values within the Unreal Engine 5 editor.
+                            </p>
+                        </div>
+                        <img src="/alisla-foley.github.io/Images/TinyTransit/Role/MainGameLoopLogic.gif" alt="Main Game Loop Logic">
+                    </li>
+
+                    <li class="role-item">
+                        <div class="role-content">
+                            <h3>Vehicle Movement and Physics</h3>
+                            <p>
+                                I custom developed the full vehicle movement and handling system, focusing on expressive, arcade-style driving. This included acceleration, braking, steering, drifting, stabilization, and simulated wheel suspension behaviour. I tuned physics values to reward agressive driving and controlled chaos, ensuring the vehicles felt responsive and fun to drive across a variety of terrain and obstacles.
+                            </p>
+                        </div>   
+                        <img src="/alisla-foley.github.io/Images/TinyTransit/Role/VehicleMovementAndPhysics.gif" alt="Vehicle Movement and Physics">
+                    </li>
+
+                    <li class="role-item">
+                        <div class="role-content">
+                            <h3>Saving and Profiles</h3>
+                            <p>
+                                I programmed the logic behind the player profile and save system, allowing persistent storage of progression, unlocks, currency, and high scores between play sessions. This ensured reliable data handling across different game modes and supported leaderboard tracking, enabling players to engage with long-term goals and offer replayability.
+                            </p>
+                        </div>   
+                        <img src="/alisla-foley.github.io/Images/TinyTransit/Role/SavingAndProfiles.gif" alt="Saving and Profiles">
+                    </li>
+
+                    <li class="role-item">
+                        <div class="role-content">
+                            <h3>Deliveries and Packages</h3>
+                            <p>
+                                I built the delivery and package systems that form the core gameplay objective. This included spawning, tracking, and resolving deliveries, handling multiple active packages, package modifier logic, and integrating mechanics to reward players for longer distance deliveries. 
+                            </p>
+                        </div>
+                        <img src="/alisla-foley.github.io/Images/TinyTransit/Role/DeliveriesAndPackages.gif" alt="Deliveries and Packages">
+                    </li>
+
+                    <li class="role-item">
+                        <div class="role-content">
+                            <h3>Gamemodes, Scoring, and Leaderboards</h3>
+                            <p>
+                                I implemented multiple game modes, including Time Limit, Heat Mode, and Free Roam, each with distinct rule sets and scoring logic. I also created the scoring systems that reward drifting, speed, and destruction, as well as leaderboard functionality to track and compare player performance. These systems were built to encourage replayability and friendly competitiveness.
+                            </p>
+                        </div>
+                        <img src="/alisla-foley.github.io/Images/TinyTransit/Role/GamemodesScoringAndLeaderboards.gif" alt="Gamemodes, Scoring, and Leaderboards">
+                    </li>
+
+                    <li class="role-item">
+                        <div class="role-content">
+                            <h3>Visual and Sound Effects (VFX, SFX)</h3>
+                            <p>
+                                I contributed to the implementation of visual and sound effects to enhance player feedback and game feel. This included effects for drifting, collisions, deliveries, and environmental destruction, as well as integrating sound cues for vehicle actions (such as driving on different terrain) and gameplay events. These elements helped reinforce the game's chaotic tone and made interactions feel impactful and satisfying.
+                            </p>
+                        </div>
+                        <img src="/alisla-foley.github.io/Images/TinyTransit/Role/VisualAndSoundEffects.gif" alt="Visual and Sound Effects">
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section id="project-documents" class="project-section">
-            <h2>Documents</h2>
-            <p>
-                PARAGRAPH HERE..
-            </p>
-            <ul>
-                <li><a href="/alisla-foley.github.io/Documents/TinyTranit-TDD.pdf" target="_blank">Technical Design Document (TDD)</a></li>
-            </ul>
+            <div class="project-documents-layout">
+
+                <div class="project-documents-text">
+                    <h2>Documents</h2>
+                    <p>
+                        The Technical Design Document goes in-depth into how I developed certain systems, such as the vehicle movement and the delivery system. It includes screenshots of Blueprints, UML diagram plans, and coding guidelines. <br> <br>
+                    </p>
+                    <ul>
+                        <li><a href="/alisla-foley.github.io/Documents/TinyTransit/TinyTransit-TDD.pdf" target="_blank">Technical Design Document (TDD)</a></li>
+                    </ul>
+                </div>
+
+                <div class="project-documents-pdf-preview">
+                    <iframe
+                    src="/alisla-foley.github.io/Documents/TinyTransit/TinyTransit-TDD.pdf#view=FitH"
+                    title="Tiny Transit TDD Preview">
+                    </iframe>
+                </div>
+
+            </div>
         </section>
 
         <script>
@@ -99,5 +200,61 @@
             });
         </script>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+
+                const captions = [
+                    "Driving off Waterfall",
+                    "Driving at Night 1",
+                    "Driving at Night 2",
+                    "Zoomed Out Camera",
+                    "Main Menu",
+                    "Car Customization"
+                ];
+                const thumbnails = document.querySelectorAll(".gallery-thumbnails img");
+                const mainImage = document.getElementById("gallery-main");
+                const caption = document.getElementById("gallery-caption");
+
+                let currentIndex = 0;
+
+                function setActiveThumbnail(index){
+                    thumbnails.forEach(img => img.classList.remove("active"));
+
+                    const activeThumb = thumbnails[index];
+                    activeThumb.classList.add("active");
+
+                    mainImage.src = activeThumb.src;
+                    caption.textContent = captions[index];
+                    
+                    activeThumb.scrollIntoView({
+                        behavior: "smooth",
+                        inline: "center",
+                        block: "nearest"
+                    });
+                }
+
+                thumbnails.forEach((thumb, index) => {
+                    thumb.addEventListener("click", () => {
+                        currentIndex = index;
+                        setActiveThumbnail(index);
+                    });
+                });
+
+                window.nextImage = function(){
+                    currentIndex = (currentIndex + 1) % thumbnails.length;
+                    setActiveThumbnail(currentIndex);
+                }
+
+                window.prevImage = function(){
+                    currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+                    setActiveThumbnail(currentIndex);
+                }
+
+                if(thumbnails.length > 0){
+                    setActiveThumbnail(0);
+                }
+            });
+        </script>
+        
     </body>
 </html>

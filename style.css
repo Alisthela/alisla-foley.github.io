@@ -135,6 +135,8 @@ nav ul list a{
 }
 .content-buttons a:hover{
     transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 1);
+    color: #000000;
 }
 .content span{
     font-size: 3vw;
