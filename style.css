@@ -5,10 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    text-decoration: none;
     scroll-behavior: smooth;
 }
-
 .hero{
     width: 100%;
     height: 100vh;
@@ -25,6 +23,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.hero-content h1:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+.hero-content h2{
+    font-size: clamp(2rem, 4vw, 4rem);
+    color: #ffffff6b;
+    font-weight: 600;
+    -webkit-text-stroke: 2px #ffffff;
+    transition: 0.5s ease;
+}
+.hero-content h2:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+.hero-content:has(.content .logo:hover) .content-buttons{
+    opacity: 0.25;
+    transition: opacity 0.3s ease;
 }
 nav{
     width: 100%;
@@ -49,7 +66,7 @@ nav:hover{
 }
 
 nav .logo{
-    width: 500px;
+    width: clamp(150px, 20vw, 500px);
     transition: 0.5s ease;
 }
 nav .logo:hover{
@@ -61,8 +78,8 @@ nav .social-icons a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 2.5vw;
-    height: 2.5vw;
+    width: clamp(30px, 2.5vw, 50px);
+    height: clamp(30px, 2.5vw, 50px);
     background-color: #ffffff4d;
     border: 1px solid #ffffff;
     border-radius: 50%;
@@ -88,7 +105,7 @@ nav ul list:hover{
 nav ul list a{
     text-decoration: none;
     color: #fff;
-    font-size: 32px;
+    font-size: clamp(15px, 2vw, 20px);
 }
 
 .content{
@@ -121,13 +138,15 @@ nav ul list a{
     display: flex;
     gap: 1vw;
     padding-top: 6vw;
+    width: 100%;
+    justify-content: center;
 }
 .content-buttons a{
     text-decoration: none;
     display: inline-block;
     color: #fff;
     background-color: rgba(255, 255, 255, 0.2);
-    font-size: 1vw;
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
     border: 2px solid #fff;
     padding: 0.75vw 2vw;
     border-radius: 2vw;
@@ -302,9 +321,6 @@ nav ul list a{
     text-align: center;
     color: #000000
 }
-.projects-introduction{
-
-}
 
 .projects-grid{
     display: grid;
@@ -453,7 +469,7 @@ nav ul list a{
     color: #fff;
     text-decoration: none;
     transition: background 0.3s;
-    font-size: 20px;
+    font-size: clamp(15px, 1.2vw, 20px);
 }
 .dropdown-content li a:hover{
     background-color: rgba(255,255,255,0.1);
