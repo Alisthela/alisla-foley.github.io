@@ -414,16 +414,20 @@ nav ul list a{
     text-align: center;
     margin: 5vw 0;
 }
-.contact h2 {
+.contact h2{
     font-size: clamp(1.5rem, 4vw, 2.5rem);
-    color: #000;
     margin-bottom: 1.5rem;
+    -webkit-text-stroke: 2px #000;;
+    color: transparent;
 }
-.contact p {
+.contact p{
     font-size: clamp(1rem, 3vw, 1.25rem);
-    color: #000;
+    line-height: 1.6;
+    max-width: 900px;
     margin-bottom: 1rem;
+    color: #000;
 }
+
 .contact-details p {
     margin: 0.5rem 0;
 }
@@ -435,8 +439,9 @@ nav ul list a{
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: center;
+    width: 100%;
 }
 .contact-form input, .contact-form textarea {
     width: 100%;
@@ -445,8 +450,12 @@ nav ul list a{
     border-radius: 1rem;
     border: 1px solid #ccc;
     font-size: 1rem;
+    box-sizing: border-box;
 }
 .contact-form button {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 0.5rem;
     padding: 0.75rem 2rem;
     border: none;
     border-radius: 2rem;
