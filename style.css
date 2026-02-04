@@ -8,7 +8,7 @@
     scroll-behavior: smooth;
 }
 .hero{
-    width: 100svh;
+    width: 100vw;
     height: auto;
     display: flex;
     flex-direction: column;

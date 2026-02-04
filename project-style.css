@@ -18,7 +18,7 @@ body.tiny-transit{
 
 /* Hero section */
 .hero{
-    width: 100svh;
+    width: 100vw;
     height: auto;
     display: flex;
     flex-direction: column;
