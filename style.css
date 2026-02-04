@@ -498,6 +498,11 @@ nav ul list a{
     nav {
         padding: 16px 4%;
     }
+    nav ul {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
     nav ul list a {
         font-size: 18px;
     }
