@@ -496,9 +496,16 @@ nav ul list a{
     }
 
     nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 16px 4%;
+    }
+    .nav-right {
+        display: flex;
         flex-direction: column;
         align-items: flex-end;
-        padding: 16px 4%;
+        gap: 0.5rem;
     }
     nav ul {
         margin-left: 0;
