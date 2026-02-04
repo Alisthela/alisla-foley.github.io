@@ -8,8 +8,8 @@
     scroll-behavior: smooth;
 }
 .hero{
-    width: 100%;
-    height: 100vh;
+    width: 100svh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -162,50 +162,6 @@ nav ul list a{
     color: #ffffffa8;
     -webkit-text-stroke: 1px #ffffffc7;
 }
-.typing-text{
-    font-size: 3vw;
-    font-weight: 600;
-    min-width: auto;
-}
-.typing-text span{
-    position: relative;
-}
-.typing-text span::before{
-    content: "C++ Programmer ";
-    animation: words 20s infinite;
-}
-.typing-text span::after{
-    content: "";
-    background-color: transparent;
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px transparent;
-    right: -8;
-    animation: cursor 0.6s infinite;
-}
-@keyframes cursor{
-    to{
-        border-left:6px solid #ffffffa8;
-    }
-}
-@keyframes words{
-    0%, 20%{
-        content: "C++ Programmer ";
-    }
-    21%, 40%{
-        content: "Unreal Engine Scripter ";
-    }
-    41%, 60%{
-        content: "Game Developer ";
-    }
-    61%, 80%{
-        content: "AI Systems Architect ";
-    }
-    81%, 100%{
-        content: "Performance Profiler ";
-    }
-}
 
 .background-video{
     position: absolute;
@@ -267,36 +223,6 @@ nav ul list a{
     max-width: 900px;
     margin-bottom: 80px;
     color: #fff
-}
-.about-highlights{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-}
-.highlight{
-    background: rgba(255,255,255,0.06);
-    border-radius: 25px;
-    padding: 40px;
-    text-align: center;
-    transition: 0.4s ease;
-}
-.highlight:hover{
-    transform: translateY(-10px);
-    background: rgba(255,255,255,0.12);
-}
-.highlight i{
-    font-size: 50px;
-    margin-bottom: 20px;
-    color: #ffffffa8;
-}
-.highlight h3{
-    font-size: 28px;
-    margin-bottom: 12px;
-    color: #fff;
-}
-.highlight p{
-    font-size: 20px;
-    color: #ffffffb3;
 }
 
 /* Project section below*/
@@ -516,26 +442,35 @@ nav ul list a{
 }
 
 @media screen and (max-width: 768px) {
+    .hero-content {
+        padding: 2rem 1.25rem;
+    }
+
+    .content {
+        padding-top: 5rem;
+    }
     .content h1 {
-        font-size: 10vw;
+        font-size: clamp(2.5rem, 10vw, 4rem);
     }
-    .content h3, .typing-text{
-        font-size: 4vw;
+    .content h3, .typing-text {
+        font-size: clamp(1rem, 4vw, 1.5rem);
     }
-    .content-buttons{
+    .content-buttons {
         flex-direction: column;
-        gap: 2vw;
-        padding-top: 4vw;
+        gap: 1rem;
+        padding-top: 2rem;
     }
-    .content-buttons a{
-        font-size: 3vw;
-        padding: 1vw, 4vw;
+    .content-buttons a {
+        font-size: 1rem;
+        padding: 0.75rem 2rem;
+        border-radius: 999px;
     }
+
     .about-text h2, .projects-text h2{
         font-size: 8vw;
     }
-    .about-text p, .projects-text p{
-        font-size: 3.5vw;
+    .about-text p, .projects-text p {
+        font-size: clamp(1rem, 3.5vw, 1.25rem);
     }
     .highlight h3{
         font-size: 20px;
@@ -547,12 +482,42 @@ nav ul list a{
         font-size: 10px;
         padding: 4px 8px;
     }
-    nav .social-icons a{
-        width: 4vw;
-        height: 4vw;
+    nav {
+        padding: 12px 5%;
+    }
+    nav .logo {
+        width: 140px;
+    }
+    nav .social-icons a {
+        width: 40px;
+        height: 40px;
+        margin: 6px;
     }
     nav ul list a{
         font-size: 14px;
+    }
+
+    .projects-grid {
+        margin: 3rem 0;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (hover: none) {
+    .image-text {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .project-image::before {
+        opacity: 1;
+    }
+
+    .hero-content h1,
+    .hero-content h2 {
+        color: #fff;
+        -webkit-text-stroke: 0;
     }
 }
 

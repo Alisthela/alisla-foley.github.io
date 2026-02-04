@@ -18,8 +18,8 @@ body.tiny-transit{
 
 /* Hero section */
 .hero{
-    width: 100%;
-    height: 100vh;
+    width: 100svh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,61 +59,6 @@ body.tiny-transit{
 .hero-content:has(.content .logo:hover) .content-buttons{
     opacity: 0.25;
     transition: opacity 0.3s ease;
-}
-
-.content .logo{
-    width: 60vw;
-    opacity: 100%;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
-.content .logo:hover{
-    transform: scale(.9);
-    opacity: 15%;
-}
-
-.content-buttons{
-    margin-top: auto;
-    display: flex;
-    gap: 1vw;
-    padding-top: 6vw;
-    width: 100%;
-    justify-content: center;
-}
-.content-buttons a{
-    text-decoration: none;
-    display: inline-block;
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.2);
-    font-size: clamp(0.8rem, 1vw, 1.2rem);
-    border: 2px solid #fff;
-    padding: 0.75vw 2vw;
-    border-radius: 2vw;
-    transition: 0.3s ease;
-}
-.content-buttons a:hover{
-    transform: scale(1.05);
-    background-color: rgba(255, 255, 255, 1);
-    color: #000000;
-}
-
-/* Background video */
-.background-video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-}
-.background-video iframe{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 120%;
-    height: 120%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
 }
 
 /* Navigation bar */
@@ -180,6 +125,61 @@ nav ul list a{
     text-decoration: none;
     color: #fff;
     font-size: clamp(15px, 2vw, 20px);
+}
+
+.content .logo{
+    width: 60vw;
+    opacity: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.content .logo:hover{
+    transform: scale(.9);
+    opacity: 15%;
+}
+
+.content-buttons{
+    margin-top: auto;
+    display: flex;
+    gap: 1vw;
+    padding-top: 6vw;
+    width: 100%;
+    justify-content: center;
+}
+.content-buttons a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
+    border: 2px solid #fff;
+    padding: 0.75vw 2vw;
+    border-radius: 2vw;
+    transition: 0.3s ease;
+}
+.content-buttons a:hover{
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 1);
+    color: #000000;
+}
+
+/* Background video */
+.background-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+.background-video iframe{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
 }
 
 /* Projects dropdown */
@@ -275,6 +275,7 @@ nav ul list a{
 }
 .project-gallery img#gallery-main{
     width: 100%;
+    max-height: 45vh;
     border-radius: 2vw;
     object-fit: cover;
     box-shadow: 0 20px 40px rgba(107, 102, 102, 0.6);
@@ -445,12 +446,18 @@ nav ul list a{
 
 @media screen and (max-width: 768px) {
     .hero-content {
-        padding: 6vw;
+        padding: 2rem 1.25rem;
+    }
+    .hero-content h1 {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+    }
+    .hero-content h2 {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
     }
     .content-buttons {
         flex-direction: column;
         gap: 3vw;
-        padding-top: 4vw;
+        padding-top: 2rem;
     }
     .content-buttons a {
         width: fit-content;
@@ -471,15 +478,17 @@ nav ul list a{
     }
 
     .project-about-layout, .project-documents-layout {
-        grid-template-columns: 1fr;
-        gap: 6vw;
+        gap: 2.5rem;
     }
-    .project-about-text, .project-role-text {
-        text-align: justify;
-        padding: 4vw;
+    .project-about-text, .project-role-text, .project-gallery, .project-documents-layout {
+        padding: 1.5rem;
+        border-radius: 20px;
     }
-    .project-section p, .project-section ul{
-        font-size: clamp(0.8rem, 3vw, 1.25rem);
+    .project-section {
+        padding: 3rem 1.25rem;
+    }
+    .project-section p, .project-section ul, .role-content p {
+        font-size: clamp(1rem, 3.5vw, 1.25rem);
     }
     .project-section h2, .role-content h3 { 
         text-align: center;
@@ -489,9 +498,13 @@ nav ul list a{
     .gallery-arrow {
         display: none;
     }
+    .gallery-thumbnails {
+        gap: 12px;
+        padding: 1rem 0;
+    }
     .gallery-thumbnails img {
-        flex: 0 0 55vw;
-        max-width: 80vw;
+        flex: 0 0 80%;
+        max-width: 85%;
     }
     .gallery-thumbnails-wrapper{
         overflow-x: auto;
@@ -500,9 +513,21 @@ nav ul list a{
         -webkit-overflow-scrolling: touch;
     }
 
-    .role-item img, .project-documents-pdf-preview {
+    .project-documents-pdf-preview {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+    }
+    .role-item img {
         width: 100%;
         margin-top: 2vh;
+    }
+}
+
+@media (hover: none) {
+    .hero-content h1,
+    .hero-content h2 {
+        color: #fff;
+        -webkit-text-stroke: 0;
     }
 }
 
@@ -540,6 +565,9 @@ nav ul list a{
         padding: 5vw;
     }
 
+    .project-gallery img#gallery-main{
+        max-height: 40vh;
+    }
     .gallery-thumbnails img {
         flex: 0 0 70vw;
         max-width: 90vw;
