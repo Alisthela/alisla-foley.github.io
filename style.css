@@ -464,19 +464,33 @@ nav ul list a{
         border-radius: 999px;
     }
 
-    .about-text h2, .projects-text h2{
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .about-image {
+        order: 1;
+    }
+    .about-text {
+        order: 2;
+        text-align: left;
+    }
+    .about-text p {
+        margin-bottom: 0;
+    }
+    .about-text h2, .projects-text h2 {
         font-size: 8vw;
     }
     .about-text p, .projects-text p {
         font-size: clamp(1rem, 3.5vw, 1.25rem);
     }
-    .highlight h3{
+    .highlight h3 {
         font-size: 20px;
     }
-    .highlight p{
+    .highlight p {
         font-size: 16px;
     }
-    .project-tags span{
+    .project-tags span {
         font-size: 10px;
         padding: 4px 8px;
     }
@@ -539,7 +553,7 @@ nav ul list a{
     .about-text p, .projects-text p{
         font-size: 4vw;
     }
-    
+
     .highlight h3{
         font-size: 18px;
     }
