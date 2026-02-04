@@ -472,19 +472,35 @@ nav ul list a{
     }
 
     nav {
+        flex-direction: column;
+        align-items: flex-end;
         padding: 16px 4%;
     }
     nav ul {
-        margin-left: auto;
+        margin-left: 0;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.5rem;
+    }
+    nav ul list {
+        margin-left: 0;
+        display: block;
     }
     nav ul list a {
-        font-size: 18px;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    nav .social-icons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
     }
     nav .social-icons a {
-        width: 30px;
-        height: 30px;
+        width: 36px;
+        height: 36px;
+        margin: 0;
     }
 
     .project-about-layout, .project-documents-layout {
