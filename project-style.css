@@ -433,6 +433,10 @@ nav ul list a{
     nav .logo {
         width: clamp(140px, 30vw, 500px);
     }
+    nav .social-icons a{
+        width: 3vw;
+        height: 3vw;
+    }
 
     .project-about-layout, .project-documents-layout {
         gap: 4vw;
@@ -520,6 +524,11 @@ nav ul list a{
     .role-item img {
         width: 100%;
         margin-top: 2vh;
+    }
+
+    .background-video iframe{
+        width:120vw;
+        height:120vh;
     }
 }
 

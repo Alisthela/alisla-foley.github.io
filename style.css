@@ -437,9 +437,6 @@ nav ul list a{
         width: 3vw;
         height: 3vw;
     }
-    nav ul list a{
-        font-size: 18px;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -483,25 +480,27 @@ nav ul list a{
         font-size: 10px;
         padding: 4px 8px;
     }
+
     nav {
-        padding: 12px 5%;
+        padding: 16px 4%;
     }
-    nav .logo {
-        width: 140px;
+    nav ul list a {
+        font-size: 18px;
     }
     nav .social-icons a {
-        width: 40px;
-        height: 40px;
-        margin: 6px;
-    }
-    nav ul list a{
-        font-size: 14px;
+        width: 30px;
+        height: 30px;
     }
 
     .projects-grid {
         margin: 3rem 0;
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .background-video iframe{
+        width:120vw;
+        height:120vh;
     }
 }
 
@@ -533,12 +532,14 @@ nav ul list a{
         font-size: 4vw;
         padding: 1.2vw, 5vw;
     }
+
     .about-text h2, .projects-text h2{
         font-size: 10vw;
     }
     .about-text p, .projects-text p{
         font-size: 4vw;
     }
+    
     .highlight h3{
         font-size: 18px;
     }
@@ -549,11 +550,15 @@ nav ul list a{
         font-size: 9px;
         padding: 3px 6px;
     }
-    nav .social-icons a{
-        width: 5vw;
-        height: 5vw;
+
+    nav .logo {
+        width: 160px;
     }
-    nav ul list a{
-        font-size: 12px;
+    nav .social-icons a {
+        width: 36px;
+        height: 36px;
+    }
+    nav ul list a {
+        font-size: 16px;
     }
 }
