@@ -405,6 +405,61 @@ nav ul list a{
     display:block;
 }
 
+.contact {
+    width:100%;
+    padding: 5vw;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 30px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 5vw 0;
+}
+.contact h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #000;
+    margin-bottom: 1.5rem;
+}
+.contact p {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    color: #000;
+    margin-bottom: 1rem;
+}
+.contact-details p {
+    margin: 0.5rem 0;
+}
+.contact-details a {
+    color: #43baff;
+    text-decoration: underline;
+}
+.contact-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.75rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+.contact-form button {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: #43baff;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.contact-form button:hover {
+    background-color: #1d8fe3;
+}
+
 /* Device adjustments */
 @media screen and (max-width: 1024px) {
     .content h1 {
@@ -543,6 +598,13 @@ nav ul list a{
     .background-video iframe{
         width:120vw;
         height:120vh;
+    }
+
+    .contact {
+        padding: 3rem 2rem;
+    }
+    .contact-form input, .contact-form textarea {
+        max-width: 100%;
     }
 }
 
