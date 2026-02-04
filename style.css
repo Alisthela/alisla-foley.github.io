@@ -423,13 +423,13 @@ nav ul list a{
     margin: 5vw 0;
 }
 .contact h2 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: 80px;
     margin-bottom: 1.5rem;
     -webkit-text-stroke: 2px #000;;
     color: transparent;
 }
 .contact p {
-    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-size: 28px;
     line-height: 1.6;
     max-width: 900px;
     margin-bottom: 1rem;
@@ -452,6 +452,7 @@ nav ul list a{
     gap: 1rem;
     width: 100%;
     max-width: 500px;
+    margin-top: 2rem;
 }
 .contact-form input, .contact-form textarea {
     width: 100%;
@@ -464,7 +465,8 @@ nav ul list a{
 .contact-form input + input {
     margin-top: 1rem;
 }
-.contact-form text-area {
+.contact-form textarea {
+    resize: none;
     margin-top: 1rem;
 }
 .contact-form button {
@@ -475,7 +477,7 @@ nav ul list a{
     border-radius: 2rem;
     background-color: #43baff;
     color: #fff;
-    font-size: 1rem;
+    font-size: 28px;
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -628,6 +630,9 @@ nav ul list a{
     }
     .contact-form input, .contact-form textarea, .contact-form button {
         max-width: 100%;
+    }
+    .contact p {
+        font-size: clamp(1rem, 3.5vw, 1.25rem);
     }
 }
 
