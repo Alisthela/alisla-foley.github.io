@@ -558,10 +558,10 @@ nav ul list a{
     .about-text p {
         margin-bottom: 0;
     }
-    .about-text h2, .projects-text h2 {
+    .about-text h2, .projects-text h2, .contact h2 {
         font-size: 8vw;
     }
-    .about-text p, .projects-text p {
+    .about-text p, .projects-text p, .contact p, .contact-form button {
         font-size: clamp(1rem, 3.5vw, 1.25rem);
     }
     .highlight h3 {
@@ -631,13 +631,6 @@ nav ul list a{
     .contact-form input, .contact-form textarea, .contact-form button {
         max-width: 100%;
     }
-    
-    .contact h2 {
-        font-size: 8vw;
-    }
-    .contact p, .contact-form button {
-        font-size: clamp(1rem, 3.5vw, 1.25rem);
-    }
 }
 
 @media (hover: none) {
@@ -669,18 +662,11 @@ nav ul list a{
         padding: 1.2vw, 5vw;
     }
 
-    .contact h2 {
+    .about-text h2, .projects-text h2, .contact h2 {
         font-size: 10vw;
     }
-    .contact p, .contact-form button {
-        font-size: 4vw;
-    }
-
-    .about-text h2, .projects-text h2{
-        font-size: 10vw;
-    }
-    .about-text p, .projects-text p{
-        font-size: 4vw;
+    .about-text p, .projects-text p, .contact p, .contact-form button {
+        font-size: clamp(1rem, 3.5vw, 1.25rem);
     }
 
     .highlight h3{
