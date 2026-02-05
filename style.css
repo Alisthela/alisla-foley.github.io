@@ -327,7 +327,7 @@ nav ul list a{
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.35) 100%);
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 100%);
     pointer-events: none;
 }
 .image-text{
