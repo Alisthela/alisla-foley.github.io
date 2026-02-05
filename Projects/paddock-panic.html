@@ -6,12 +6,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         <link rel="stylesheet" href="/alisla-foley.github.io/project-style.css">
     </head>
-    <body>
+    <body class="paddock-panic">
 
         <div class="hero">
             <div class="background-video">
                 <iframe 
-                src="https://www.youtube.com/embed/chXMYggHU8U?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=chXMYggHU8U"
+                src="https://www.youtube.com/embed/GcLzTJD_03U?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=GcLzTJD_03U"
                 frameborder="0"
                 allow="autoplay; fullscreen"
                 allowfullscreen>
@@ -20,11 +20,12 @@
 
             <nav>
                 <a href="https://alisthela.github.io/alisla-foley.github.io/"><img src="/alisla-foley.github.io/Images/Logo.png" class="logo"></a>
+                <div class="nav-right">         
                 <ul>
                     <list><a href="/alisla-foley.github.io/index.html#hero">HOME</a></list>
 
                     <list class="projects-dropdown">
-                        <a href="/alisla-foley.github.io/#projects">PROJECTS </a><i class="fa-solid fa-caret-down"></i></a>
+                        <a>PROJECTS <i class="fa-solid fa-caret-down"></i></a>
                         <ul class="dropdown-content">
                             <li><a href="/alisla-foley.github.io/Projects/fire-in-the-void.html">Fire in the Void</a></li>
                             <li><a href="/alisla-foley.github.io/Projects/tiny-transit.html">Tiny Transit</a></li>
@@ -37,12 +38,12 @@
                     <list><div class="social-icons"><a href="https://www.linkedin.com/in/alisla-foley/"><i class="fa-brands fa-linkedin"></i></a></div></list>
                     <list><div class="social-icons"><a href="https://github.com/Alisthela"><i class="fa-brands fa-github"></i></a></div></list>
                 </ul>
+                </div>
             </nav>
 
             <div class ="hero-content">
                 <div class="content">
-                    <h2><i class="fa-solid fa-paw"></i></h2>
-                    <h1>Paddock Panic</h1>
+                    <img src="/alisla-foley.github.io/Images/PaddockPanic/PaddockPanicLogo.png" class="logo"></a>
                 </div>
                 <div class="content-buttons">
                     <a href="/alisla-foley.github.io/paddock-panic.html#project-about">About</a>
@@ -53,35 +54,116 @@
             </div>
         </div>
 
-        <section id="project-about" class="project-section">
+        <div class="section-divider"></div>
+        
+        <section id="project-about" class="project-section project-about-layout">
+
+            <div class="project-about-text">
             <h2>About</h2>
-            <p>
-                PARAGRAPH HERE..
+            <p> 
+                Paddock Panic is a hyper-casual, isometric herding game where players take on the role of a farm dog tasked with guiding lost flocks of sheep back to their paddock before nightfall. Using simple but expressive controls, player draw paths to direct the dog's movement and bark to influence sheep and scare off threats. <br><br>
+                Set in a deceptively peaceful farmland filled with cliffs, hazards, and stalking wolves, the game blends calm visuals with increasing urgency as time runs out. Players must balance speed, strategy, and multitasking, choosing whether to risk pursuing bonuses and power-ups or focus on safely escorting the sheep home. Even saving a single sheep counts as success, encouraging risk-reward decision-making and replayability to earn the best score.
             </p>
+            </div>
+
+            <div class="project-gallery">
+                <div class="gallery-background">
+                    <div id="gallery-caption" class="gallery-main-caption">
+                        Flocking Mechanic
+                    </div>
+                <img id="gallery-main" src="/alisla-foley.github.io/Images/PaddockPanic/Gallery/GalleryImage1.png" alt="Project Image 1">
+                </div>
+
+                <div class="gallery-thumbnails-wrapper">
+                    <div class="gallery-thumbnails">
+                        <img src="/alisla-foley.github.io/Images/PaddockPanic/Gallery/GalleryImage1.png" onclick="setImage(0)">
+                        <img src="/alisla-foley.github.io/Images/PaddockPanic/Gallery/GalleryImage2.png" onclick="setImage(1)">
+                        <img src="/alisla-foley.github.io/Images/PaddockPanic/Gallery/GalleryImage3.png" onclick="setImage(2)">
+                        <img src="/alisla-foley.github.io/Images/PaddockPanic/Gallery/GalleryImage4.png" onclick="setImage(3)">
+                        <img src="/alisla-foley.github.io/Images/PaddockPanic/Gallery/GalleryImage5.png" onclick="setImage(4)">
+                        <img src="/alisla-foley.github.io/Images/PaddockPanic/Gallery/GalleryImage6.png" onclick="setImage(5)">
+                        <div class="gallery-scroll-spacer"></div>
+                    </div>
+                </div>
+
+                <button class="gallery-arrow left" onclick="prevImage()">&#10094;</button>
+                <button class="gallery-arrow right" onclick="nextImage()">&#10095;</button>
+            </div>
+
         </section>
 
         <section id="project-role" class="project-section">
-            <h2>My Role</h2>
-            <p>
-                PARAGRAPH HERE..
-            </p>
-        </section>
+            <div class="project-role-text">
+                <h2>My Role</h2>
+                <p>
+                    Paddock Panic was developed over 2.5 months as the final project of my first year at AIE. Each team was tasked with creating a hyper-casual mobile-oriented game, with the option to develop for non-mobile platforms. Our team initially consisted of six members, but one programmer left early in development, leaving me as the sole programming student alongside two designers and two artists. This created technical challenges and required careful rescoping and prioritisation. Fortunately, both designers had prior experience working in Unreal Engine and contributed to areas such as hazards, UI, and scoring systems. The project was a valuable learning experience that strengthened my ability to collaborate across disciplines, adapt to shifting team dynamics, and deliver complex systems under constraints.<br><br>
+                </p>
+                <ul class="role-list">
 
-        <section id="project-progression" class="project-section">
-            <h2>Technical Progression</h2>
-            <p>
-                PARAGRAPH HERE..
-            </p>
+                    <li class="role-item">
+                        <div class="role-content">
+                            <h3>Main Game Loop Logic</h3>
+                            <p>
+                               I implemented the core game loop that determines level flow, win and loss conditions, time pressure, and scoring. This included tracking sheep states, handling level completion based on remaining sheep and time constraints, and managing transitions between gameplay states such as active play, failure, and success.
+                            </p>
+                        </div>
+                        <img src="/alisla-foley.github.io/Images/PaddockPanic/Role/MainGameLoopLogic.gif" alt="Main Game Loop Logic">
+                    </li>
+
+                    <li class="role-item">
+                        <div class="role-content">
+                            <h3>AI, Behaviour Trees, and Flocking</h3>
+                            <p>
+                                I developed the sheep and wolf AI using Unreal Engine's Behaviour Trees and Blackboard systems, with a strong focus on flocking and reactive behaviour. Sheep operate across multiple states (individual, grouped, and herded), transitioning dynamically based on proximity to the dog, nearby sheep, and active threats. Flocking behaviour was implemented using cohesion, alignment, and separation rules, allowing sheep to move naturally as a group while still reacting to danger. I also implemented wolf AI with stalking, hunting, and retreat states, enabling interactions where the player must actively intervene to protect the flock.
+                            </p>
+                        </div>   
+                        <img src="/alisla-foley.github.io/Images/PaddockPanic/Role/AIBehaviourTreesAndFlocking.gif" alt="AI, Behaviour Trees, and Flocking">
+                    </li>
+
+                    <li class="role-item">
+                        <div class="role-content">
+                            <h3>Player Movement</h3>
+                            <p>
+                                I designed and implemented the player control system that allows the dog to be ordered to move through click-and-drag path drawing. This system records player input in real time, converts it into spline-based movement, and visually represents paths using particle effects for clarity and feedback. The movement system was built to be intuitive, responsive, and readable from an isometric perspective, encouraging players to plan routes around hazards.
+                            </p>
+                        </div>   
+                        <img src="/alisla-foley.github.io/Images/PaddockPanic/Role/PlayerMovement.gif" alt="Player Movement">
+                    </li>
+
+                    <li class="role-item">
+                        <div class="role-content">
+                            <h3>Visual Effects (VFX) and Art</h3>
+                            <p>
+                                I contributed to visual effects and early art implementation to support gameplay readability and player feedback. This included path-drawing effects, indicators, hazard feedback, and visual cues for sheep AI states such as flocking, panicing, and dying. These effects were designed to be clear and minimal, reinforcing the hyper-casual aesthetic while ensuring players could quickly understand cause-and-effect relationships during chaotic moments.
+                            </p>
+                        </div>
+                        <img src="/alisla-foley.github.io/Images/PaddockPanic/Role/VisualEffectsAndArt.gif" alt="Visual Effects and Art">
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section id="project-documents" class="project-section">
-            <h2>Documents</h2>
-            <p>
-                PARAGRAPH HERE..
-            </p>
-            <ul>
-                <li><a href="/alisla-foley.github.io/Documents/PaddockPanic-TDD.pdf" target="_blank">Technical Design Document (TDD)</a></li>
-            </ul>
+            <div class="project-documents-layout">
+
+                <div class="project-documents-text">
+                    <h2>Documents</h2>
+                    <p>
+                        I implemented the core technical systems outlined in the Technical Design Document, including the main game loop, player control system, flocking and behaviour tree AI for sheep and wolves, and supporting visual feedback to ensure responsive and engaging gameplay. This was the first concept to 'release' game I have worked on alongside a team and the TDD reflects my first attempt at documenting technical progression. <br> <br>
+                    </p>
+                    <ul>
+                        <li><a href="/alisla-foley.github.io/Documents/PaddockPanic/PaddockPanic-TDD.pdf" target="_blank">Technical Design Document (TDD)</a></li>
+                    </ul>
+                </div>
+
+                <div class="project-documents-pdf-preview">
+                    <iframe
+                    src="/alisla-foley.github.io/Documents/PaddockPanic/PaddockPanic-TDD.pdf#view=FitH"
+                    title="Paddock Panic TDD Preview">
+                    </iframe>
+                </div>
+
+            </div>
         </section>
 
         <script>
@@ -99,5 +181,61 @@
             });
         </script>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+
+                const captions = [ 
+                    "Flocking Mechanic",
+                    "Close Victory",
+                    "Tutorial",
+                    "Level Complete",
+                    "Main Menu",
+                    "Shop/Cosmetics"
+                ];
+                const thumbnails = document.querySelectorAll(".gallery-thumbnails img");
+                const mainImage = document.getElementById("gallery-main");
+                const caption = document.getElementById("gallery-caption");
+
+                let currentIndex = 0;
+
+                function setActiveThumbnail(index){
+                    thumbnails.forEach(img => img.classList.remove("active"));
+
+                    const activeThumb = thumbnails[index];
+                    activeThumb.classList.add("active");
+
+                    mainImage.src = activeThumb.src;
+                    caption.textContent = captions[index];
+                    
+                    activeThumb.scrollIntoView({
+                        behavior: "smooth",
+                        inline: "center",
+                        block: "nearest"
+                    });
+                }
+
+                thumbnails.forEach((thumb, index) => {
+                    thumb.addEventListener("click", () => {
+                        currentIndex = index;
+                        setActiveThumbnail(index);
+                    });
+                });
+
+                window.nextImage = function(){
+                    currentIndex = (currentIndex + 1) % thumbnails.length;
+                    setActiveThumbnail(currentIndex);
+                }
+
+                window.prevImage = function(){
+                    currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+                    setActiveThumbnail(currentIndex);
+                }
+
+                if(thumbnails.length > 0){
+                    setActiveThumbnail(0);
+                }
+            });
+        </script>
+        
     </body>
 </html>

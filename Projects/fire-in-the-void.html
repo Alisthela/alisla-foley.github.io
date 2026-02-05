@@ -2,16 +2,16 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fire in the Void - Alisla Foley</title>
+        <title>Fire In The Void - Alisla Foley</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         <link rel="stylesheet" href="/alisla-foley.github.io/project-style.css">
     </head>
-    <body>
+    <body class="fire-in-the-void">
 
         <div class="hero">
             <div class="background-video">
                 <iframe 
-                src="https://www.youtube.com/embed/chXMYggHU8U?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=chXMYggHU8U"
+                src="https://www.youtube.com/embed/pCIGRQUFgng?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=pCIGRQUFgng"
                 frameborder="0"
                 allow="autoplay; fullscreen"
                 allowfullscreen>
@@ -20,11 +20,12 @@
 
             <nav>
                 <a href="https://alisthela.github.io/alisla-foley.github.io/"><img src="/alisla-foley.github.io/Images/Logo.png" class="logo"></a>
+                <div class="nav-right">         
                 <ul>
                     <list><a href="/alisla-foley.github.io/index.html#hero">HOME</a></list>
 
                     <list class="projects-dropdown">
-                        <a href="/alisla-foley.github.io/#projects">PROJECTS </a><i class="fa-solid fa-caret-down"></i></a>
+                        <a>PROJECTS <i class="fa-solid fa-caret-down"></i></a>
                         <ul class="dropdown-content">
                             <li><a href="/alisla-foley.github.io/Projects/fire-in-the-void.html">Fire in the Void</a></li>
                             <li><a href="/alisla-foley.github.io/Projects/tiny-transit.html">Tiny Transit</a></li>
@@ -37,51 +38,118 @@
                     <list><div class="social-icons"><a href="https://www.linkedin.com/in/alisla-foley/"><i class="fa-brands fa-linkedin"></i></a></div></list>
                     <list><div class="social-icons"><a href="https://github.com/Alisthela"><i class="fa-brands fa-github"></i></a></div></list>
                 </ul>
+                </div>
             </nav>
 
             <div class ="hero-content">
                 <div class="content">
-                    <h2><i class="fa-solid fa-fire-extinguisher"></i> <i class="fa-solid fa-fire-flame-curved"></i></h2>
-                    <h1>Fire in the Void</h1>
+                    <img src="/alisla-foley.github.io/Images/FireInTheVoid/FireInTheVoidLogo.png" class="logo"></a>
                 </div>
                 <div class="content-buttons">
                     <a href="/alisla-foley.github.io/fire-in-the-void.html#project-about">About</a>
                     <a href="/alisla-foley.github.io/fire-in-the-void.html#project-role">My Role</a>
                     <a href="/alisla-foley.github.io/fire-in-the-void.html#project-progression">Progression</a>
-                    <a href="/alisla-foley.github.io/fire-in-the-void.html#project-documents">Documents</a>
                 </div>
             </div>
         </div>
 
-        <section id="project-about" class="project-section">
+        <div class="section-divider"></div>
+        
+        <section id="project-about" class="project-section project-about-layout">
+
+            <div class="project-about-text">
             <h2>About</h2>
-            <p>
-                PARAGRAPH HERE..
+            <p> 
+                Fire in the Void is a high-intensity VR firefighting game set in deep space, where players take on the role of a lone emergency response pilot tasked with extinguishing fires aboard space stations. From a fully interactive cockpit, players fly between stations, manage limited water resources through refueling, and use specialised water-based weapons to contain dynamically spreading fires before entire facilities are lost. <br><br>
+                Each run blends precise vehicle control, strategic resource management, and time-based pressure, supported by procedurally generated fires and space stations. The game combines the tension of emergency response with immersive cockpit-based VR interaction, delivering a focused, replayable experience built around mastery, efficiency, and high-stakes decision making.
             </p>
+            </div>
+
+            <div class="project-gallery">
+                <div class="gallery-background">
+                    <div id="gallery-caption" class="gallery-main-caption">
+                        Space is on Fire
+                    </div>
+                <img id="gallery-main" src="/alisla-foley.github.io/Images/FireInTheVoid/Gallery/GalleryImage1.png" alt="Project Image 1">
+                </div>
+
+                <div class="gallery-thumbnails-wrapper">
+                    <div class="gallery-thumbnails">
+                        <img src="/alisla-foley.github.io/Images/FireInTheVoid/Gallery/GalleryImage1.png" onclick="setImage(0)">
+                        <img src="/alisla-foley.github.io/Images/FireInTheVoid/Gallery/GalleryImage2.png" onclick="setImage(1)">
+                        <img src="/alisla-foley.github.io/Images/FireInTheVoid/Gallery/GalleryImage3.png" onclick="setImage(2)">
+                        <img src="/alisla-foley.github.io/Images/FireInTheVoid/Gallery/GalleryImage4.png" onclick="setImage(3)">
+                        <img src="/alisla-foley.github.io/Images/FireInTheVoid/Gallery/GalleryImage5.png" onclick="setImage(4)">
+                        <img src="/alisla-foley.github.io/Images/FireInTheVoid/Gallery/GalleryImage6.png" onclick="setImage(5)">
+                        <div class="gallery-scroll-spacer"></div>
+                    </div>
+                </div>
+
+                <button class="gallery-arrow left" onclick="prevImage()">&#10094;</button>
+                <button class="gallery-arrow right" onclick="nextImage()">&#10095;</button>
+            </div>
+
         </section>
 
         <section id="project-role" class="project-section">
-            <h2>My Role</h2>
-            <p>
-                PARAGRAPH HERE..
-            </p>
-        </section>
+            <div class="project-role-text">
+                <h2>My Role</h2>
+                <p>
+                    Fire in the Void was a 2 month project between 2 designers, 2 programmers, and 2 artists, who were given the task of developing a VR game within that time frame. My primary focus on this project was developing the core gameplay loop of locating active fires, extinguishing them, managing limited resources, and sucessfully saving space stations. Beyond the core loop, I expanded the player's experience by implementing supporting systems such as the cockpit radar and information monitor, which helped provide real-time feedback on fire locations, station status, and game progression.
+                </p>
+                <ul class="role-list">
 
-        <section id="project-progression" class="project-section">
-            <h2>Technical Progression</h2>
-            <p>
-                PARAGRAPH HERE..
-            </p>
-        </section>
+                    <li class="role-item">
+                        <div class="role-content">
+                            <h3>Main Game Loop Logic</h3>
+                            <p>
+                               I implemented the core gameplay loop that governs gameplay flow, station activation, fire progression, and win/loss conditions. This included controlling when stations ignite, managing time limits for each station, handling failure states when stations combust, and determining level completion based on the remaining stations. The system was designed to escalate pressure gradually while maintaining performance in a VR environment.
+                            </p>
+                        </div>
+                        <img src="/alisla-foley.github.io/Images/FireInTheVoid/Role/MainGameLoopLogic.gif" alt="Main Game Loop Logic">
+                    </li>
 
-        <section id="project-documents" class="project-section">
-            <h2>Documents</h2>
-            <p>
-                PARAGRAPH HERE..
-            </p>
-            <ul>
-                <li><a href="/alisla-foley.github.io/Documents/FireInTheVoid-TDD.pdf" target="_blank">Technical Design Document (TDD)</a></li>
-            </ul>
+                    <li class="role-item">
+                        <div class="role-content">
+                            <h3>Weapons, Health, Monitor, and Radar Systems</h3>
+                            <p>
+                               I developed the ship's water-based weapon systems, including the water cannon and water bomb, handling activation, firing logic, resource consumption, and cooldown behaviour. Alongside this, I developed the ship health and damage system, providing audiovisual feedback for collisions and failures. I also worked on the cockpit information monitor and radar system, which tracks active fires, displays proximity data, and updates in real time to provide critical information without cluttering the player's VR view.
+                            </p>
+                        </div>   
+                        <img src="/alisla-foley.github.io/Images/FireInTheVoid/Role/WeaponsHealthMonitorAndRadarSystems.gif" alt="Weapons, Health, Monitor, and Radar Systems">
+                    </li>
+
+                    <li class="role-item">
+                        <div class="role-content">
+                            <h3>Main Menu, End Screen and UI</h3>
+                            <p>
+                               I implemented the main menu and end of game screens, integrating interactive UI elements consistent with the game's diegetic design. This included level start flow, menu navigation, and win/loss presentation, as well as displaying post-mission statistics such as fires extinguished, time taken, resource usage, and damage sustained. The UI was designed to be readable, immersive, and comfortable for seated VR play.
+                            </p>
+                        </div>   
+                        <img src="/alisla-foley.github.io/Images/FireInTheVoid/Role/MainMenuEndScreenAndUI.gif" alt="Main Menu, End Screen and UI">
+                    </li>
+
+                    <li class="role-item">
+                        <div class="role-content">
+                            <h3>Scoring System</h3>
+                            <p>
+                                I developed the scoring system that evaluates player performance based on the number of space stations sucessfully saved, time efficiency, and mission outcomes. Points are awarded or deducted depending on station survival, promoting risk-reward decision-making and encouraging replayability. The scoring logic ties directly into the main game loop and end screen to provide clear, meaningful feedback on player performance.
+                            </p>
+                        </div>
+                        <img src="/alisla-foley.github.io/Images/FireInTheVoid/Role/ScoringSystem.gif" alt="Scoring System">
+                    </li>
+
+                    <li class="role-item">
+                        <div class="role-content">
+                            <h3>Visual Effects (VFX) and Sound Effects (SFX)</h3>
+                            <p>
+                                I implemented and integrated both visual effects and sound effects to support gameplay clarity, immersion, and player feedback. This included fire behaviour, water weapon effects, impact splashes, explosions, monitor indicators, and cockpit feedback, alongside sound cues for weapon activation, firing, refuelling, collisions, fire extinguishing, and UI interactions. All efects were tuned to remain readable and performant in a VR environment, ensuring that critical information, such as successful fire suppression and ship damage, was communicated clearly through audiovisual feedback.
+                            </p>
+                        </div>
+                        <img src="/alisla-foley.github.io/Images/FireInTheVoid/Role/VisualEffectsAndSoundEffects.gif" alt="Visual Effects and Sound Effects">
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <script>
@@ -99,5 +167,61 @@
             });
         </script>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+
+                const captions = [ 
+                    "Space is on Fire",
+                    "Extinguishing Fire",
+                    "Cockpit",
+                    "Monitor",
+                    "Main Menu",
+                    "Final Score"
+                ];
+                const thumbnails = document.querySelectorAll(".gallery-thumbnails img");
+                const mainImage = document.getElementById("gallery-main");
+                const caption = document.getElementById("gallery-caption");
+
+                let currentIndex = 0;
+
+                function setActiveThumbnail(index){
+                    thumbnails.forEach(img => img.classList.remove("active"));
+
+                    const activeThumb = thumbnails[index];
+                    activeThumb.classList.add("active");
+
+                    mainImage.src = activeThumb.src;
+                    caption.textContent = captions[index];
+                    
+                    activeThumb.scrollIntoView({
+                        behavior: "smooth",
+                        inline: "center",
+                        block: "nearest"
+                    });
+                }
+
+                thumbnails.forEach((thumb, index) => {
+                    thumb.addEventListener("click", () => {
+                        currentIndex = index;
+                        setActiveThumbnail(index);
+                    });
+                });
+
+                window.nextImage = function(){
+                    currentIndex = (currentIndex + 1) % thumbnails.length;
+                    setActiveThumbnail(currentIndex);
+                }
+
+                window.prevImage = function(){
+                    currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+                    setActiveThumbnail(currentIndex);
+                }
+
+                if(thumbnails.length > 0){
+                    setActiveThumbnail(0);
+                }
+            });
+        </script>
+        
     </body>
 </html>
