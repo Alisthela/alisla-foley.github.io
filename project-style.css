@@ -224,7 +224,7 @@ nav ul list a{
     display:block;
 }
 .section-divider{
-    width: 120%;
+    width: 100%;
     height: 8vh;
     background: linear-gradient(to bottom, #000, #00000083, transparent);
 }
